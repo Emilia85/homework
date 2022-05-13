@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New without Css</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        h1{
+            background-color: rgb(60, 250, 250);
+            text-align: center;
+            padding: 20px;
+        }
+        nav{
+            background-color: aquamarine;
+            display: grid;
+            place-items: center;
+        }
+        nav ul{
+            list-style: none;
+        }
+        nav ul a{
+            display: inline-block;
+            padding: 20px;
+            text-decoration: none;
+            color: #000;
+            transition: 0.2 ease-in;
+            font-size: 18px;
+        }
+        nav ul a:hover{
+            background-color: rgb(196, 231, 144);
+            color: aliceblue;
+        }
+        section{
+            background-color: rgb(255, 255, 153);
+            padding: 16px 30px;
+            
+        }
+        section p{
+                text-align: justify;
+        }
+        footer{
+            background-color: rgb(0, 234, 255);
+            text-align: right;
+            padding: 16px 30px;
+            clear: both;
+        }
+        img{
+            width: 320px;
+            height: 250px;
+            float: left;
+            margin: 0 30px 20px 0;
+        }
+        h2{
+            text-align: center;
+        }
+        #dati{
+          background-color: rgb(162, 219, 200);
+          padding: 20px;
+          text-align: center;
+      }
+      #invia{
+          background-color: rgb(87, 203, 87);
+          width: 120px;
+          height: 70px;
+          border-radius: 50%;
+          border: none;
+          box-shadow: -5px -5px 30px 5px rgb(26, 233, 47), 5px 5px 30px 5px rgb(0, 149, 255);
+          margin-right: 30px;
+          font-size: 20px;
+      }
+      #cancella{
+          background-color: rgb(220, 56, 45);
+          width: 120px;
+          height: 70px;
+          border-radius: 50%;
+          border: none;
+          box-shadow: -5px -5px 30px 5px rgb(242, 110, 87), 5px 5px 30px 5px #770ee0;
+          margin-left: 20px;
+          font-size: 20px;
+      }
+      #social{
+            background-color: rgb(170, 237, 125);
+            text-align: center;
+        }
+
+      #map{
+          width: 100%;
+          height: 900px;
+      }
+      .myDiv{
+           text-align:center;
+           display: inline-block;
+       }
+      #like{
+          background-color: rgb(217, 108, 232);
+          width: 120px;
+          height: 70px;
+          border-radius: 50%;
+          border: none;
+          box-shadow: -5px -5px 30px 5px rgb(26, 130, 233), 5px 5px 30px 5px rgb(255, 34, 0);
+          margin-right: 5px;
+          font-size: 20px;
+      }
+       #dont{
+          background-color: rgb(62, 136, 167);
+          width: 120px;
+          height: 70px;
+          border-radius: 50%;
+          border: none;
+          box-shadow: -5px -5px 30px 5px rgb(26, 81, 233), 5px 5px 30px 5px rgb(255, 0, 0);
+          margin-right: 5px;
+          font-size: 20px;
+       }
+       
+      
+</style>
+<script>
+   
+    function incrementButton(){
+        var element = document.getElementById("incrementText");
+        var value = element.innerHTML;
+        ++value;
+        console.log(value);
+        document.getElementById("incrementText").innerHTML=value;
+    }
+    function dicrementButton(){
+        var elem = document.getElementById("decrementText");
+        var val = elem.innerHTML;
+        ++val;
+        console.log(val);
+        document.getElementById("decrementText").innerHTML=val;
+    }
+</script>
+<script src=".\main.js"> </script>
+</head>
+<body>
+    <h1>My blog</h1>
+    <nav>
+        <ul>
+          
+             <a href="">Home</a>
+            <a href="https://en.wikipedia.org/wiki/Tokyo"target="_blank">My places visited</a>
+            <a href="https://ricette.giallozafferano.it/Ragu-alla-bolognese.html"target="_blank">My favorite dishes</a>
+            <a href="https://www.kilburncocktailbarmilano.it/"target="_blank">My favorite coktail</a>
+        </ul>
+    </nav>
+   <section>
+<h2>As I saw the world!</h2>
+<img src="https://cdn.pixabay.com/photo/2021/03/01/07/27/girl-6058990__340.jpg" alt="Colorful portrait">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, harum, dolorum reprehenderit adipisci optio maiores unde excepturi impedit ipsum distinctio repellendus minus necessitatibus quam tempora dolorem tempore quia est temporibus.</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eos voluptates sequi atque illum deserunt esse, iste ut hic corrupti sint quis ab nisi velit aliquid nemo molestiae ullam ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum eum impedit, odit laborum itaque quod eligendi sed at exercitationem animi, eaque. </p>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eos soluta corrupti provident praesentium consectetur magnam ab nisi maiores debitis nemo quia porro dolores neque dolorum, aut laborum a eaque.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur in consequatur deleniti sequi, aliquid, possimus error repellendus nesciunt id odit quia expedita repellat nihil voluptatibus sunt hic fugiat esse, veritatis vero. Pariatur vero tempora perspiciatis sed voluptatum expedita amet? Autem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat sapiente non provident optio similique maiores accusantium at quos blanditiis fugiat eum itaque, rem, id commodi asperiores nihil quaerat? Nesciunt doloribus debitis magni sequi quod ducimus porro consectetur aliquid laboriosam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis corrupti odio ut porro dolores tempore harum iusto! Debitis ea repellendus odio maiores nihil officiis doloremque deserunt quas, quae odit cumque perferendis quos sint quam consectetur dolores tempora atque similique corrupti deleniti quia! Unde, expedita. Velit optio nam laudantium. Eligendi?</p>
+   </section>
+   <form id="dati" onsubmit="success()">
+    <h3>I want to know you better, please fill in the data below:</h3>
+    Last name
+    <input type="text" id="cognome"><br><br>
+    First name
+    <input type="text" id="nome"><br><br>
+    Date of birth
+    <input type="date" id="data"><br><br>
+    Your gender<br>
+    <input type="radio" name="sex" id="maschio" value="maschio">Male<br>
+    <input type="radio" name="sex" id="femmina" value="femmina">Female<br>
+    <input type="radio" name="sex" id="altro" value="altro">Other<br>
+    <br>
+    Where do you prefer to go on vacation?<br>
+    <input type="radio" name="vacanza" id="mare" value="mare">At the sea<br>
+    <input type="radio" name="vacanza" id="montagna" value="montagna">At the mountains<br>
+    <input type="radio" name="vacanza" id="giungla" value="giungla">In the jungle<br>
+    <input type="radio" name="vacanza" id="deserto" value="deserto">In desert<br>
+    <input type="radio" name="vacanza" id="altrov" value="altro">Somewhere else<br>
+    <label for="favcolor">Select your favorite color:</label><br>
+    <input type="color" name="favcolor" id="color" value="#ff00ff"><br><br>	  
+    Your password
+    <input type="password" name="password" id="password" value="" required><br><br>
+    Your e-mail
+    <input type="email" id="email" name="user-email" value=""><br><br>
+    Your vote for me<br>
+    1<input type="range" id="voto" name="voto" min="1" max="10">10<br><br>
+    <label for="messaggio" id="messaggio">Your message:<br><br><br><br></label><textarea name="messaggio" cols="25" rows="7" placeholder="&#9997; Your message for me..."></textarea><br><br>
+    <input type="submit" class="btn btn-success" name="invia" id="invia" value="Sent" onclick="sent()">
+    <button type="reset" class="btn btn-danger" name="cancella" id="cancella" value="reset" onclick= "alert('Maybe you deleted it by mistake, please fill in the form!')">Cancell</button>
+</form>
+<div id="social">
+    <span style='font-size:30px;'>&#128222; Call me if you have an interesting story to tell that others can see 555-789-23468</span><br><br>
+    <span style='font-size:30px;'>&#9997; Write to me if you have an interesting story to tell that others can see at the address: Sunflower 7576, NY</span><br><br>
+    <p style="text-align: center; font-size: 24px;">You can express your opinion about my page by voting:</p><br><br>
+
+    <div class="myDiv">
+        <h3 id="incrementText">0</h3>
+        <button type="button" id="like" onclick="incrementButton()">Like</button>
+    
+        <h3 id="decrementText">0</h3>
+        <button type="button" id="dont" onclick="dicrementButton()">Unlike</button>
+    </div>
+    
+    
+    <p style="text-align: center; font-size: 24px;">You can find me here anytime you want!</p>
+    <img id="map" src="https://www.burningcompass.com/countries/united-states/states/maps/new-york/new-york-map.jpg" alt="New York Map">
+</div>
+   <footer>By Emilia 2022</footer>
+</body>
+</html>
