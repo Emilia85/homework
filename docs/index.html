@@ -204,6 +204,19 @@
     <p style="text-align: center; font-size: 24px;">You can find me here anytime you want!</p>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjIOmZezxZwiRb0YBBELwvIqsxP2GUz0w&libraries=places&callback=initMap">
+    const WS_BASE_URL_1= 'https://maps.googleapis.com/maps/api/js?key=';
+     const WS_BASE_URL_2= 'https://goo.gl/maps/TG7cCcTtoSGKaH9N7';
+     const API_KEY="AIzaSyCjIOmZezxZwiRb0YBBELwvIqsxP2GUz0w";
+
+    async function callWSFetch(url){
+         fetch(url).then(response =>{
+              return response.json();
+         }).then(data =>{
+              console.log(data);
+         })
+    }
+    callWSFetch(WS_BASE_URL_1 + API_KEY);
+    console.log("Chiamata Asincrona GET a servizio Rest metodo Fetch");
 </script>
     
 </div>
