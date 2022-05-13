@@ -167,7 +167,7 @@
     <span id="sex"></span><br>
     
     <br>
-    Where do you prefer to go on vacation?:
+    Where do you prefer to go on vacation:
     <span id="vacanza"></span><br><br>
     <label for="favcolor"> Select your favorite color:</label><br>
     <span id="color"></span>  <br><br>	  
@@ -199,5 +199,20 @@
     <img id="map" src="https://www.burningcompass.com/countries/united-states/states/maps/new-york/new-york-map.jpg" alt="New York Map">
 </div>
    <footer>By Emilia 2022</footer>
+   <script>
+    document.getElementById("email").innerHTML=" "+getURLParameter("email");
+    document.getElementById("nome").innerHTML=" "+getURLParameter("nome");
+    document.getElementById("cognome").innerHTML=" "+getURLParameter("cognome");
+    document.getElementById("data").innerHTML=" "+getURLParameter("data");
+    document.getElementById("sex").innerHTML=" "+getURLParameter("sex");
+    document.getElementById("vacanza").innerHTML=" "+getURLParameter("vacanza");
+    document.getElementById("password").innerHTML=" "+getURLParameter("password");
+    document.getElementById("color").innerHTML=" "+getURLParameter("color");
+    document.getElementById("voto").innerHTML=" "+getURLParameter("voto");
+    document.getElementById("messaggio").innerHTML=" "+getURLParameter("messaggio");
+   //file:///Users/emiliag./Desktop/Homework/new.html?email=toto@gmail.com&nome=hfgd&cognome=ghjh&data=&sex=fem
+   //file:///Users/emiliag./Desktop/Homework/new.html?color=#ff00ff
+   //file:///Users/emiliag./Desktop/Homework/new.html?email=titi@gmail.com&nome=Miki&cognome=Titi&data=2022-05-10&sex=femmina&vacanza=montagna&password=jhsdfgjh&color=d95000&voto=10&messaggio=undefined
+</script>
 </body>
 </html>
