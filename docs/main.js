@@ -97,7 +97,7 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "https://emilia85.github.io/homework/"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "file:///Users/emiliag./Desktop/Homework/new.html"+querystring,"width=200px,height=300px");
       
       }
       //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
