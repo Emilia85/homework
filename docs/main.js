@@ -97,9 +97,10 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "file:///Users/emiliag./Desktop/Homework/new.html"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "https://emilia85.github.io/homework/new.html"+querystring,"width=200px,height=300px");
       
       }
+      //https://emilia85.github.io/homework/new.html?sex=maschio&vacanza=mare&favcolor=%23fff76b&password=hjkhfhg&user-email=titi%40gmail.com&voto=10&messaggio=tresa&invia=Sent
       //file:///Users/emiliag./Desktop/Homework/new.html?email=titi@gmail.com&nome=Miki&cognome=Titi&data=2022-05-03&sex=maschio&vacanza=mare&password=fhsfhfg&color=f6df21&voto=8&messaggio=Taste
       //file:///Users/emiliag./Documents/React/Practice/grugru.html?email=titi@gmail.com&nome=Miki&cognome=Titi&data=1988-02-23&sex=maschio&vacanza=mare&password=hjkjklili&color=#d8f622&voto=9&messaggio=undefined
       //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
