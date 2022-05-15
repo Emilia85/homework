@@ -113,60 +113,21 @@ function sent(){
       }
       
  
-     /* const WS_BASE_URL_1= 'https://maps.googleapis.com/maps/api/js?key=';
-      const WS_BASE_URL_2= 'https://goo.gl/maps/TG7cCcTtoSGKaH9N7';
-      const API_KEY="AIzaSyCjIOmZezxZwiRb0YBBELwvIqsxP2GUz0w";
- 
+     /* 
+      const WS_BASE_URL_1 = 'https://api.nasa.gov/planetary/apod?api_key=';
+     const WS_BASE_URL_2 = 'https://api.nasa.gov/DONKI/FLR?startDate=2022-01-01&endDate=2022-01-30&api_key=';
+     const API_KEY = "SCjtDCGzuwEAUJyChKMvfN6hi3KGRolrHDQ8U4Ax";
+
      async function callWSFetch(url){
-          fetch(url).then(response =>{
-               return response.json();
-          }).then(data =>{
-               console.log(data);
-          })
-     }
-     callWSFetch(WS_BASE_URL_1 + API_KEY);
-     console.log("Chiamata Asincrona GET a servizio Rest metodo Fetch");
+         fetch(url).then(response =>{
+              return response.json();
+         }).then(data =>{
+              console.log(data);
+         })
+    }
+      
+ */
      
- 
-      function callWSXMLHttpRequest(url){
-      var request = new XMLHttpRequest();
-      request.open('GET', url);
-      request.send();
-      request.onload = ()=>{
-           console.log(JSON.parse(request.response));
-      }
-      }
-      callWSXMLHttpRequest(WS_BASE_URL_1 + API_KEY);
-      //document.write("Chiamata Asincrona GET a servizio REST XMLHttpRequest");
-      */
-     /* window.open("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjIOmZezxZwiRb0YBBELwvIqsxP2GUz0w&callback=initMap");
-     var map;
-     function initMap(){
-          var mapPoint = {lat: 45.434610, lng: 12.338910};
-          map = new google.maps.Map(document.getElementById("map"),{
-                center: mapPoint,
-                zoom: 15
-           });
-           var marker = new google.maps.Marker({position: mapPoint, map: map});
-     }
-     document.write(initMap());*/
- 
-     const center = { lat: 45.434610, lng: 12.338910 };
- // Create a bounding box with sides ~10km away from the center point
- const defaultBounds = {
-   north: center.lat + 0.1,
-   south: center.lat - 0.1,
-   east: center.lng + 0.1,
-   west: center.lng - 0.1,
- };
- const input = document.getElementById("pac-input");
- const options = {
-   bounds: defaultBounds,
-   componentRestrictions: { country: "us" },
-   fields: ["address_components", "geometry", "icon", "name"],
-   strictBounds: false,
-   types: ["establishment"],
- };
- const autocomplete = new google.maps.places.Autocomplete(input, options);
+    
  
  
