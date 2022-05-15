@@ -97,9 +97,12 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "https://emilia85.github.io/homework"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "https://emilia85.github.io/homework/"+querystring,"width=200px,height=300px");
       
       }
+      //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
+      //file:///Users/emiliag./Documents/React/Practice/grugru.html?email=titi@gmail.com&nome=Miki&cognome=Titi&data=1988-02-23&sex=maschio&vacanza=mare&password=hjkjklili&color=#d8f622&voto=9&messaggio=undefined
+      //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
  
       function getURLParameter(sParam) {
          
