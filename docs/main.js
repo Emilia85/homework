@@ -100,7 +100,7 @@ function sent(){
       var finestra = window.open( "file:///Users/emiliag./Documents/Play/homework/docs/new.html"+querystring,"width=200px,height=300px");
       
       }
-      //https://emilia85.github.io/Documents/homework/docs/new.html
+      //https://emilia85.github.io/homework/?sex=male&vacanza=sea&favcolor=%23ecf620&password=shgdvv&user-email=miki%40gmail.com&voto=9&messaggio=Fuckk+all&invia=Sent
       
       //https://emilia85.github.io/homework/new.html?sex=maschio&vacanza=mare&favcolor=%23fff76b&password=hjkhfhg&user-email=titi%40gmail.com&voto=10&messaggio=tresa&invia=Sent
       
