@@ -86,6 +86,7 @@ function sent(){
           vacanza = document.getElementById("altrov").value;
       }
       
+      
       var querystring="?email="+document.getElementById("email").value+
       "&nome="+document.getElementById("nome").value+
       "&cognome="+document.getElementById("cognome").value+
