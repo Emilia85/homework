@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my homework</title>
+    <title>My homework</title>
     <style>
         body{
-            background-color: azure;
+            background-color: rgb(237, 238, 190);
         }
         h1{
             background-color: rgb(60, 250, 250);
             text-align: center;
             padding: 20px;
+            margin-top: 5px;
+            font-family:'URW Chancery L', cursive;
         }
         nav{
             background-color: aquamarine;
@@ -31,8 +33,8 @@
             font-size: 18px;
         }
         nav ul a:hover{
-            background-color: rgb(196, 231, 144);
-            color: aliceblue;
+            background-color: rgb(40, 235, 122);
+            color: rgb(49, 54, 58);
         }
         section{
             background-color: rgb(255, 255, 153);
@@ -48,7 +50,7 @@
             padding: 16px 30px;
             clear: both;
         }
-        img{
+        #life{
             width: 320px;
             height: 250px;
             float: left;
@@ -58,170 +60,443 @@
             text-align: center;
         }
         #dati{
-          background-color: rgb(162, 219, 200);
-          padding: 20px;
-          text-align: center;
+            background-color: rgb(162, 219, 200);
+            padding: 20px;
+            text-align: center;
       }
-      #invia{
-          background-color: rgb(87, 203, 87);
-          width: 120px;
-          height: 70px;
-          border-radius: 50%;
-          border: none;
-          box-shadow: -5px -5px 30px 5px rgb(26, 233, 47), 5px 5px 30px 5px rgb(0, 149, 255);
-          margin-right: 30px;
-          font-size: 20px;
-      }
-      #cancella{
-          background-color: rgb(220, 56, 45);
-          width: 120px;
-          height: 70px;
-          border-radius: 50%;
-          border: none;
-          box-shadow: -5px -5px 30px 5px rgb(242, 110, 87), 5px 5px 30px 5px #770ee0;
-          margin-left: 20px;
-          font-size: 20px;
-      }
-      #social{
+         #invia{
+            background-color: rgb(87, 203, 87);
+            width: 120px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: -5px -5px 30px 5px rgb(26, 233, 47), 5px 5px 30px 5px rgb(0, 149, 255);
+            margin-right: 30px;
+            font-size: 20px;
+         }
+         #cancella{
+            background-color: rgb(220, 56, 45);
+            width: 120px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: -5px -5px 30px 5px rgb(242, 110, 87), 5px 5px 30px 5px #770ee0;
+            margin-left: 20px;
+            font-size: 20px;
+         }
+         #social{
             background-color: rgb(170, 237, 125);
             text-align: center;
         }
 
-      #map{
-          width: 100%;
-          height: 500px;
-      }
-      .myDiv{
-           text-align:center;
-           display: inline-block;
-       }
-      #like{
-          background-color: rgb(217, 108, 232);
-          width: 120px;
-          height: 70px;
-          border-radius: 50%;
-          border: none;
-          box-shadow: -5px -5px 30px 5px rgb(26, 130, 233), 5px 5px 30px 5px rgb(255, 34, 0);
-          margin-right: 5px;
-          font-size: 20px;
-      }
-       #dont{
-          background-color: rgb(62, 136, 167);
-          width: 120px;
-          height: 70px;
-          border-radius: 50%;
-          border: none;
-          box-shadow: -5px -5px 30px 5px rgb(26, 81, 233), 5px 5px 30px 5px rgb(255, 0, 0);
-          margin-right: 5px;
-          font-size: 20px;
-       }
-       
-      
-</style>
-<script>
-   function getURLParameter(sParam) {
-        
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
+         #map{
+            width: 100%;
+            height: 500px;
+         }
+         .myDiv{
+            text-align:center;
+            display: inline-block;
+         }
+         #like{
+            background-color: rgb(217, 108, 232);
+            width: 120px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: -5px -5px 30px 5px rgb(26, 130, 233), 5px 5px 30px 5px rgb(255, 34, 0);
+            margin-right: 5px;
+            font-size: 20px;
+         }
+         #dont{
+            background-color: rgb(62, 136, 167);
+            width: 120px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: -5px -5px 30px 5px rgb(26, 81, 233), 5px 5px 30px 5px rgb(255, 0, 0);
+            margin-right: 5px;
+            font-size: 20px;
+         }
+         .vizitatori {
+            width: 90%;
+            min-width: 210px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center; 
+            
+         }  
+         .eye {
+            width: 45px;
+            height: 45px;
+            border: solid 1px #000;
+            border-radius:  600% 70%;
+            transform: rotate(45deg);
+        }
+        .eye:before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: #000 ;
+            width: 20px;
+            height: 20px;
+            border: solid 4px rgb(10, 211, 238);
+            border-radius: 50%;
+            left: 8px;
+            top: 7px;
+        }
+         #count{
+            padding-left: 15px;
+        }    
+         #thanks{
+            padding-left: 5px;
+        }
+      * {
+            box-sizing: border-box;
+        }
+        img {
+             vertical-align: middle;
+        }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+            position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+             cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+            
+    </style>
+    <script>
+        function getURLParameter(sParam) {
+            
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
             }
         }
-    }
-    function incrementButton(){
-        var element = document.getElementById("incrementText");
-        var value = element.innerHTML;
-        ++value;
-        console.log(value);
-        document.getElementById("incrementText").innerHTML=value;
-    }
-    function dicrementButton(){
-        var elem = document.getElementById("decrementText");
-        var val = elem.innerHTML;
-        ++val;
-        console.log(val);
-        document.getElementById("decrementText").innerHTML=val;
-    }
-</script>
-<script src=".\main.js"> </script>
-</head>
-<body>
-    <h1>My blog</h1>
-    <nav>
-        <ul>
+        function incrementButton(){
+            var element = document.getElementById("incrementText");
+            var value = element.innerHTML;
+            ++value;
+            console.log(value);
+            document.getElementById("incrementText").innerHTML=value;
+        }
+        function dicrementButton(){
+            var elem = document.getElementById("decrementText");
+            var val = elem.innerHTML;
+            ++val;
+            console.log(val);
+            document.getElementById("decrementText").innerHTML=val;
+        }
+    </script>
+    <script src=".\main.js"> </script>
+    </head>
+    <body>
+        <nav>
+            <ul>
           
-             <a href="">Home</a>
-            <a href="https://en.wikipedia.org/wiki/Tokyo"target="_blank">My places visited</a>
-            <a href="https://ricette.giallozafferano.it/Ragu-alla-bolognese.html"target="_blank">My favorite dishes</a>
-            <a href="https://www.kilburncocktailbarmilano.it/"target="_blank">My favorite coktail</a>
-        </ul>
-    </nav>
-   <section>
-<h2>As I saw the world!</h2>
-<img src="https://cdn.pixabay.com/photo/2021/03/01/07/27/girl-6058990__340.jpg" alt="Colorful portrait">
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, harum, dolorum reprehenderit adipisci optio maiores unde excepturi impedit ipsum distinctio repellendus minus necessitatibus quam tempora dolorem tempore quia est temporibus.</p>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eos voluptates sequi atque illum deserunt esse, iste ut hic corrupti sint quis ab nisi velit aliquid nemo molestiae ullam ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum eum impedit, odit laborum itaque quod eligendi sed at exercitationem animi, eaque. </p>
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eos soluta corrupti provident praesentium consectetur magnam ab nisi maiores debitis nemo quia porro dolores neque dolorum, aut laborum a eaque.</p>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur in consequatur deleniti sequi, aliquid, possimus error repellendus nesciunt id odit quia expedita repellat nihil voluptatibus sunt hic fugiat esse, veritatis vero. Pariatur vero tempora perspiciatis sed voluptatum expedita amet? Autem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat sapiente non provident optio similique maiores accusantium at quos blanditiis fugiat eum itaque, rem, id commodi asperiores nihil quaerat? Nesciunt doloribus debitis magni sequi quod ducimus porro consectetur aliquid laboriosam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis corrupti odio ut porro dolores tempore harum iusto! Debitis ea repellendus odio maiores nihil officiis doloremque deserunt quas, quae odit cumque perferendis quos sint quam consectetur dolores tempora atque similique corrupti deleniti quia! Unde, expedita. Velit optio nam laudantium. Eligendi?</p>
-   </section>
-   <form id="dati">
-    Last name:
-    <span id="cognome"></span><br><br>
-    First name:
-    <span id="nome"></span><br><br>
-    Date of birth:
-    <span id="data"></span><br><br>
-    Your gender:
-    <span id="sex"></span><br>
-    
-    <br>
-    Where do you prefer to go on vacation:
-    <span id="vacanza"></span><br><br>
-    <label for="favcolor"> Select your favorite color:</label><br>
-    <span id="color"></span>  <br><br>	  
-    Your password:
-    <span id="password"></span><br><br>
-    Your e-mail:
-    <span id="email"></span><br><br>
-    Your vote for me:
-    <span id="voto"></span><br><br>
-    Your message:
-    <span id="messaggio"></span><br><br>
-  
-</form>
-<div id="social">
-    <span style='font-size:30px;'>&#128222; Call me if you have an interesting story to tell that others can see 555-789-23468</span><br><br>
-    <span style='font-size:30px;'>&#9997; Write to me if you have an interesting story to tell that others can see at the address: Sunflower 7576, NY</span><br><br>
-    <p style="text-align: center; font-size: 24px;">You can express your opinion about my page by voting:</p><br><br>
+                <a href="">Home</a>
+                <a href="https://en.wikipedia.org/wiki/Tokyo"target="_blank">My places visited</a>
+                <a href="https://ricette.giallozafferano.it/Ragu-alla-bolognese.html"target="_blank">My favorite dishes</a>
+                <a href="https://www.kilburncocktailbarmilano.it/"target="_blank">My favorite coktail</a>
+            </ul>
+         </nav>
 
-    <div class="myDiv">
-        <h3 id="incrementText">0</h3>
-        <button type="button" id="like" onclick="incrementButton()">Like</button>
+        <h1  style='font-size:40px;'>My stories as I lived them &#128521;</h1>
+
+        <div class="vizitatori">
+            <div class = "eye"></div>
+                <div class="leftVizite">  
+                        <p  id="count">0</p></div>
+                            <p id = "thanks">views</p>
+            
+    </div>       
+    <section>
+        <h2>As I saw the world!</h2>
+        <img  id="life"src="https://cdn.pixabay.com/photo/2021/03/01/07/27/girl-6058990__340.jpg" alt="Colorful portrait">
+        <p>A short account of the way the world is seen through my eyes. I wandered countries, continents and oceans far and wide, everywhere I felt at home, I had beautiful and hospitable people, who made me feel at home with them, as if I were part of family.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, harum, dolorum reprehenderit adipisci optio maiores unde excepturi impedit ipsum distinctio repellendus minus necessitatibus quam tempora dolorem tempore quia est temporibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eos voluptates sequi atque illum deserunt esse, iste ut hic corrupti sint quis ab nisi velit aliquid nemo molestiae ullam ratione.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatum eum impedit, odit laborum itaque quod eligendi sed at exercitationem animi, eaque. </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit eos soluta corrupti provident praesentium consectetur magnam ab nisi maiores debitis nemo quia porro dolores neque dolorum, aut laborum a eaque.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur in consequatur deleniti sequi, aliquid, possimus error repellendus nesciunt id odit quia expedita repellat nihil voluptatibus sunt hic fugiat esse, veritatis vero. Pariatur vero tempora perspiciatis sed voluptatum expedita amet? Autem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit placeat sapiente non provident optio similique maiores accusantium at quos blanditiis fugiat eum itaque, rem, id commodi asperiores nihil quaerat? Nesciunt doloribus debitis magni sequi quod ducimus porro consectetur aliquid laboriosam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis corrupti odio ut porro dolores tempore harum iusto! Debitis ea repellendus odio maiores nihil officiis doloremque deserunt quas, quae odit cumque perferendis quos sint quam consectetur dolores tempora atque similique corrupti deleniti quia! Unde, expedita. Velit optio nam laudantium. Eligendi?</p>
+
+    <div class="container">
+        <div class="mySlides">
+        <div class="numbertext">1 / 12</div>
+        <img src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+        </div>
     
-        <h3 id="decrementText">0</h3>
-        <button type="button" id="dont" onclick="dicrementButton()">Unlike</button>
+        <div class="mySlides">
+      <div class="numbertext">2 / 12</div>
+      <img src="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+  
+    <div class="mySlides">
+        <div class="numbertext">3 / 12</div>
+        <img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+      
+    <div class="mySlides">
+        <div class="numbertext">4 / 12</div>
+        <img src="https://images.pexels.com/photos/1402850/pexels-photo-1402850.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+  
+    <div class="mySlides">
+        <div class="numbertext">5 / 12</div>
+        <img src="https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+      
+    <div class="mySlides">
+        <div class="numbertext">6 / 12</div>
+        <img src="https://images.pexels.com/photos/9289794/pexels-photo-9289794.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
     </div>
     
-    <p style="text-align: center; font-size: 24px;">You can find me here anytime you want!</p>
-    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774386.242475618!2d-74.5387138493979!3d40.69718119775262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sit!4v1652599360475!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     <div class="mySlides">
+        <div class="numbertext">7 / 12</div>
+        <img src="https://images.pexels.com/photos/70846/netherlands-landscape-sky-clouds-70846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">8 / 12</div>
+        <img src="https://images.pexels.com/photos/66258/staniel-cay-swimming-pig-seagull-fish-66258.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">9 / 12</div>
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">10 / 12</div>
+        <img src="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">11 / 12</div>
+        <img src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:700px;">
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">12 / 12</div>
+        <iframe width="100%" height="700px" src="https://player.vimeo.com/external/592772975.sd.mp4?s=1ace120228a4ecb52f623fb714b52ffb1339fac8&profile_id=165&oauth2_token_id=57447761" alt="The ocean seen from the train" frameborder="0" allowfullscreen></iframe>
+    </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+     <div class="caption-container">
+        <p id="caption"></p>
+     </div>
+  
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="https://images.pexels.com/photos/3293148/pexels-photo-3293148.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(1)" alt="The Woods">
+      </div>
+        <div class="column">
+             <img class="demo cursor" src="https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(2)" alt="Cinque Terre">
+      </div>
+         <div class="column">
+            <img class="demo cursor" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+         <div class="column">
+            <img class="demo cursor" src="https://images.pexels.com/photos/1402850/pexels-photo-1402850.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+         <div class="column">
+             <img class="demo cursor" src="https://images.pexels.com/photos/4220967/pexels-photo-4220967.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(5)" alt="Vulcan erupting at night">
+      </div>    
+        <div class="column">
+            <img class="demo cursor" src="https://images.pexels.com/photos/9289794/pexels-photo-9289794.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(6)" alt="A temple in Japan">
+      </div>
+         <div class="column">
+         <img class="demo cursor" src="https://images.pexels.com/photos/70846/netherlands-landscape-sky-clouds-70846.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(7)" alt="Windmills from Holland">
+      </div>
+         <div class="column">
+         <img class="demo cursor" src="https://images.pexels.com/photos/66258/staniel-cay-swimming-pig-seagull-fish-66258.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(8)" alt="A pig swimming with a bird in the back">
+      </div>
+        <div class="column">
+         <img class="demo cursor" src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(9)" alt="Lake from Mountains">
+    </div>
+        <div class="column">
+        <img class="demo cursor" src="https://images.pexels.com/photos/1166209/pexels-photo-1166209.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(10)" alt="Lavender field">
+  </div>
+    <div class="column">
+         <img class="demo cursor" src="https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" style="width:100%; height:200px;" onclick="currentSlide(11)" alt="Two zebras in the jungle">
+  </div>
+    <div class="column">
+         <iframe class="demo cursor" width="100%" height="200px" src="https://player.vimeo.com/external/592772975.sd.mp4?s=1ace120228a4ecb52f623fb714b52ffb1339fac8&profile_id=165&oauth2_token_id=57447761" title="Sea view from a train" frameborder="0" allowfullscreen onclick="currentSlide(12)" ></iframe>
+  </div>
+  </div>
+   </section>
+    <form id="dati">
+            Last name:
+            <span id="cognome"></span><br><br>
+            First name:
+            <span id="nome"></span><br><br>
+            Date of birth:
+            <span id="data"></span><br><br>
+            Your gender:
+            <span id="sex"></span><br>
+            
+            <br>
+            Where do you prefer to go on vacation:
+            <span id="vacanza"></span><br><br>
+            <label for="favcolor"> Select your favorite color:</label><br>
+            <span id="color"></span>  <br><br>	  
+            Your password:
+            <span id="password"></span><br><br>
+            Your e-mail:
+            <span id="email"></span><br><br>
+            Your vote for me:
+            <span id="voto"></span><br><br>
+            Your message:
+            <span id="messaggio"></span><br><br>
+    
+    </form>
+<div id="social">
+        <span style='font-size:30px;'>&#128222; Call me if you have an interesting story to tell that others can see 555-789-23468</span><br><br>
+        <span style='font-size:30px;'>&#9997; Write to me if you have an interesting story to tell that others can see at the address: Sunflower 7576, NY</span><br><br>
+        <p style="text-align: center; font-size: 24px;">You can express your opinion about my page by voting:</p><br><br>
+
+    <div class="myDiv">
+            <h3 id="incrementText">0</h3>
+            <button type="button" id="like" onclick="incrementButton()">Like</button>
+        
+            <h3 id="decrementText">0</h3>
+            <button type="button" id="dont" onclick="dicrementButton()">Unlike</button>
+    </div>
+    
+            <p style="text-align: center; font-size: 24px;">You can find me here anytime you want!</p>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d774386.242475618!2d-74.5387138493979!3d40.69718119775262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sit!4v1652599360475!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
    <footer>By Emilia 2022</footer>
    <script>
-    document.getElementById("email").innerHTML=" "+getURLParameter("email");
-    document.getElementById("nome").innerHTML=" "+getURLParameter("nome");
-    document.getElementById("cognome").innerHTML=" "+getURLParameter("cognome");
-    document.getElementById("data").innerHTML=" "+getURLParameter("data");
-    document.getElementById("sex").innerHTML=" "+getURLParameter("sex");
-    document.getElementById("vacanza").innerHTML=" "+getURLParameter("vacanza");
-    document.getElementById("password").innerHTML=" "+getURLParameter("password");
-    document.getElementById("color").innerHTML=" "+getURLParameter("color");
-    document.getElementById("voto").innerHTML=" "+getURLParameter("voto");
-    document.getElementById("messaggio").innerHTML=" "+getURLParameter("messaggio");
+            document.getElementById("email").innerHTML=" "+getURLParameter("email");
+            document.getElementById("nome").innerHTML=" "+getURLParameter("nome");
+            document.getElementById("cognome").innerHTML=" "+getURLParameter("cognome");
+            document.getElementById("data").innerHTML=" "+getURLParameter("data");
+            document.getElementById("sex").innerHTML=" "+getURLParameter("sex");
+            document.getElementById("vacanza").innerHTML=" "+getURLParameter("vacanza");
+            document.getElementById("password").innerHTML=" "+getURLParameter("password");
+            document.getElementById("color").innerHTML=" "+getURLParameter("color");
+            document.getElementById("voto").innerHTML=" "+getURLParameter("voto");
+            document.getElementById("messaggio").innerHTML=" "+getURLParameter("messaggio");
 
-    //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
-   
+            //https://emilia85.github.io/homework/?cognome=Titi&color=c4bc00&data=2022-05-11&email=titi%40gmail.com&messaggio=Thagfgf&nome=Miki&password=jhfgkhj&sex=maschio&vacanza=mare&voto=10
+        
+            const countEl =  document.getElementById("count");
+
+            function updateVisitCount(){
+                fetch('https://api.countapi.xyz/update/my-homework/homework/?amount=1')
+                .then(res => res.json())
+                .then(res => {
+                    countEl.innerHTML = res.value;
+                });
+            }
+                updateVisitCount();
+
+                let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
 </script>
+
 </body>
 </html>
