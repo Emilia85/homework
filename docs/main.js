@@ -97,10 +97,11 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "file:///Users/emiliag./Documents/Play/homework/docs/new.html"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "https://emilia85.github.io//Documents/Play/homework/docs/new.html"+querystring,"width=200px,height=300px");
       
       }
-      
+      //https://emilia85.github.io//Documents/Play/homework/docs/new.html?email=fjjk@gmail.com&nome=fbgf&cognome=ghgf&data=2022-05-10&sex=male&vacanza=sea&password=dgggrtg&color=ff00ff&voto=8&messaggio=taste
+      //file:///Users/emiliag./Documents/Play/homework/docs/new.html
       //https://emilia85.github.io//Documents/Play/homework/docs/new.html?email=emi@gmail.com&nome=miki&cognome=tty&data=2022-05-04&sex=female&vacanza=desert&password=jhgjhghjg&color=a96800&voto=9&messaggio=jhfgjhgjhgj
       //https://emilia85.github.io/homework/new.html?sex=maschio&vacanza=mare&favcolor=%23fff76b&password=hjkhfhg&user-email=titi%40gmail.com&voto=10&messaggio=tresa&invia=Sent
       
