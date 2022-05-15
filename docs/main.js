@@ -96,7 +96,7 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "file:///Users/emiliag./Desktop/Homework/new.html"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "https://emilia85.github.io/homework/?sex=maschio&vacanza=giungla&favcolor=%2361177c&password=jhbfjhbjh&user-email=titi%40gmail.com&voto=9&messaggio=Taste+the+rainbow&invia=Sent"+querystring,"width=200px,height=300px");
       
       }
  
