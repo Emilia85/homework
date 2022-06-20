@@ -97,7 +97,7 @@ function sent(){
       "&color="+document.getElementById("color").value.substring(1)+
       "&voto="+document.getElementById("voto").value+
       "&messaggio="+document.getElementById("messaggio").value;
-      var finestra = window.open( "https://emilia85.github.io/homework/new.html"+querystring,"width=200px,height=300px");
+      var finestra = window.open( "https://emilia85.github.io/homework./new.html"+querystring,"width=200px,height=300px");
       
       }
       //Indirizzo assoluto: https://emilia85.github.io/homework/new.html
